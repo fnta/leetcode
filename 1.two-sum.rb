@@ -9,10 +9,13 @@
 # @param {Integer} target
 # @return {Integer[]}
 def two_sum(nums, target)
-　　(0..nums.length-1).each do |i|
-        (i+1..nums.length-1).each do |j|
-            return [i, j] if nums[i] + nums[j] == target
-        end
+    hash = {}
+    (0..nums.length-1).each do |i|
+        hash.store(nums[i], i)
+    end
+    (0..nums.length-1).each do |i|
+        complement = target - nums[i]
+        return [i, hash.fetch(complement)] if hash.has_key?(complement) && hash.fetch(complement) != i
     end
 end
 # @lc code=end
