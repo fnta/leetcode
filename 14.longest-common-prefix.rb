@@ -8,22 +8,19 @@
 # @param {String[]} strs
 # @return {String}
 def longest_common_prefix(strs)
-    return "" if strs.nil? || strs.size == 0
     return strs[0] if strs.size == 1
 
-    output = ""
-
-    for i in 0...strs[0].size do
-        for j in 1...strs.size do
-            if strs[i][j] != strs[0][i]
-                output = strs[0][0...i]
-                return output
-            end
+    return "" if strs.empty? 
+    s = ""
+    base = strs[0]
+    for i in 0..base.length-1
+        if strs.all?{|x| x[i] == base[i]}
+            s += base[i]
+        else
+            break
         end
-        output << strs[0][i]
     end
-
-    output
+    s
 end
 # @lc code=end
 
