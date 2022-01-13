@@ -9,6 +9,6 @@
 # @param {String} needle
 # @return {Integer}
 def str_str(haystack, needle)
-    
+    needle.empty? ? 0 : haystack.index(needle) || -1
 end
 # @lc code=end
