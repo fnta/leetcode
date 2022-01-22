@@ -9,7 +9,20 @@
 # @param {String} b
 # @return {String}
 def add_binary(a, b)
-    
+    length = a.size > b.size ? a.size : b.size
+    result, carry = [], 0
+  
+  
+    1.upto(length) do |i|
+      sum = a[i * -1].to_i + b[i * -1].to_i
+      sum += carry
+  
+      result.unshift((sum % 2).to_s)
+      carry = sum / 2
+    end
+  
+    return result.unshift(carry.to_s).join unless carry.zero?
+    result.join  
 end
 # @lc code=end
 
