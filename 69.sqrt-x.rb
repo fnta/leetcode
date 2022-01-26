@@ -8,9 +8,7 @@
 # @param {Integer} x
 # @return {Integer}
 def my_sqrt(x)
-    n = x
-    n = (n+x/n)/2 while n*n > x
-    n      
+    (0..x).bsearch { |i| (i+1)**2 > x }
 end
 # @lc code=end
 
