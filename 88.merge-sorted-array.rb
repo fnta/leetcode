@@ -21,7 +21,12 @@ def merge(nums1, m, nums2, n)
         j -= 1
       end
       k -= 1
-    end      
+    end
+    until j < 0
+        nums1[k] = nums2[j]
+        k -= 1
+        j -= 1
+      end    
 end
 # @lc code=end
 
