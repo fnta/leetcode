@@ -17,7 +17,7 @@
 # @param {TreeNode} root
 # @return {Boolean}
 def is_symmetric(root)
-    
+    # https://www.youtube.com/watch?v=6T3SSb6vch4
 end
 # @lc code=end
 
