@@ -17,7 +17,19 @@
 # @param {TreeNode} root
 # @return {Boolean}
 def is_symmetric(root)
-    # https://www.youtube.com/watch?v=6T3SSb6vch4
+    return true if root.nil?
+
+    compare_func(root.left, root.right)
+end
+
+def compare_func(p,q)
+    return true if p.nil? && q.nil?
+
+    if p && q && (p.val == q.val)
+        compare_func(p.left,q.right) && compare_func(p.right,q.left)
+    else
+        false
+    end
 end
 # @lc code=end
 
