@@ -16,6 +16,18 @@
 # end
 # @param {TreeNode} root
 # @return {Integer}
+# t - top, l - left, r - right
+t = TreeNode.new(3)
+tl = TreeNode.new(9)
+tr = TreeNode.new(20)
+trl = TreeNode.new(15)
+trr = TreeNode.new(7)
+
+t.left = tl
+t.right = tr
+  tr.left = trl
+  tr.right = trr
+
 def max_depth(root)
     
 end
