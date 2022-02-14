@@ -16,6 +16,10 @@
 # @param {ListNode} l1
 # @param {ListNode} l2
 # @return {ListNode}
+
+test_l1 = [2,4,3]
+test_l2 = [5,6,4]
+
 def add_two_numbers(l1, l2)
     n1, n2 = l1, l2
 
@@ -39,5 +43,7 @@ def add_two_numbers(l1, l2)
 
     answer.next
 end
+
+p = add_two_numbers(test_l1, test_l2)
 # @lc code=end
 
