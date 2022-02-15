@@ -41,9 +41,9 @@ def add_two_numbers(l1, l2)
         n1, n2 = n1&.next, n2&.next
     end
 
-    answer.next
+    return answer.next
 end
 
-p = add_two_numbers(test_l1, test_l2)
+p add_two_numbers(test_l1, test_l2)
 # @lc code=end
 
