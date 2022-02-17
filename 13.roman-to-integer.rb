@@ -7,6 +7,8 @@
 # @lc code=start
 # @param {String} s
 # @return {Integer}
+test = "III"
+
 def roman_to_int(s)
     hash = {
         'I' => 1,
@@ -34,5 +36,7 @@ def roman_to_int(s)
 
     return total
 end
+
+p roman_to_int(test)
 # @lc code=end
 
