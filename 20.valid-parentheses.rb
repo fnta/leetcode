@@ -7,6 +7,8 @@
 # @lc code=start
 # @param {String} s
 # @return {Boolean}
+test = "()[]{}"
+
 def is_valid(s)
     return true if s.empty?
 
@@ -25,5 +27,7 @@ def is_valid(s)
     end
     return stack.empty?
 end
+
+p is_valid(test)
 # @lc code=end
 

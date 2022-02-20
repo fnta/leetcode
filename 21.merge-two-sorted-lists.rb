@@ -16,6 +16,9 @@
 # @param {ListNode} list1
 # @param {ListNode} list2
 # @return {ListNode}
+test_list1 = [1,2,4]
+test_list2 = [1,3,4]
+
 def merge_two_lists(list1, list2)
     head = current = ListNode.new('')
     while (list1 || list2)
@@ -39,5 +42,7 @@ def merge_two_lists(list1, list2)
     end   
     return head.next
 end
+
+p merge_two_lists(test_list1, test_list2)
 # @lc code=end
 
