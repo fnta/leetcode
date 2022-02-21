@@ -7,6 +7,8 @@
 # @lc code=start
 # @param {Integer[]} nums
 # @return {Integer}
+test = [0,0,1,1,1,2,2,3,3,4]
+
 def remove_duplicates(nums)
     if(nums.length == 0 || nums.length == 1)
         return nums.length;
@@ -20,6 +22,9 @@ def remove_duplicates(nums)
         end
         break if i >= nums.length-1
     end
+    p nums
     return index + 1;
 end
+
+p remove_duplicates(test)
 # @lc code=end
