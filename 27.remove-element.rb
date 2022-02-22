@@ -8,6 +8,9 @@
 # @param {Integer[]} nums
 # @param {Integer} val
 # @return {Integer}
+test_nums = [3,2,2,3]
+test_val =3
+
 def remove_element(nums, val)
     return 0 if nums.length == 0
 
@@ -23,5 +26,7 @@ def remove_element(nums, val)
 
     return nums.length
 end
+
+p remove_element(test_nums, test_val)
 # @lc code=end
 
