@@ -8,6 +8,9 @@
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer}
+test_nums = [1,3,5,6]
+test_target = 5
+
 def search_insert(nums, target)
     if nums.include?(target)
         return nums.index(target)
@@ -22,5 +25,7 @@ def search_insert(nums, target)
     return 0 if target < nums.min
     return nums.size if target > nums.max
 end
+
+p search_insert(test_nums, test_target)
 # @lc code=end
 
