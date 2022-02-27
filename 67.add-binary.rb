@@ -8,6 +8,9 @@
 # @param {String} a
 # @param {String} b
 # @return {String}
+test_a = "11"
+test_b = "1"
+
 def add_binary(a, b)
     length = a.size > b.size ? a.size : b.size
     result, carry = [], 0
@@ -24,5 +27,7 @@ def add_binary(a, b)
     return result.unshift(carry.to_s).join unless carry.zero?
     result.join  
 end
+
+p add_binary(test_a,test_b)
 # @lc code=end
 
