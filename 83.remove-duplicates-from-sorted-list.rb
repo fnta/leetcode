@@ -15,12 +15,14 @@
 # end
 # @param {ListNode} head
 # @return {ListNode}
+test_head = [1,1,2]
+
 def delete_duplicates(head)
     return nil if head.nil?
     
     h = t = head
     n = head.next
-    
+
     until n.nil?
         if n.val != t.val
             t = t.next = n
@@ -31,5 +33,7 @@ def delete_duplicates(head)
     t.next = nil
     h
 end
+
+p delete_duplicates(test_head)
 # @lc code=end
 
