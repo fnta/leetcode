@@ -16,6 +16,8 @@
 # end
 # @param {TreeNode} root
 # @return {Integer[]}
+test_root = [1,null,2,3]
+
 def inorder_traversal(root)
     return [] unless root
      
@@ -25,5 +27,7 @@ def inorder_traversal(root)
     arr += inorder_traversal(root.right)
     arr   
 end
+
+p inorder_traversal(test_root)
 # @lc code=end
 
