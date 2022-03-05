@@ -17,10 +17,15 @@
 # @param {TreeNode} p
 # @param {TreeNode} q
 # @return {Boolean}
+test_p = [1,2,3]
+test_q = [1,2,3]
+
 def is_same_tree(p, q)
     return true if p.nil? && q.nil?
     return false if (p.nil? || q.nil? || p.val != q.val)
     return is_same_tree(p.left, q.left) && is_same_tree(p.right, q.right)
 end
+
+p is_same_tree(test_p, test_q)
 # @lc code=end
 
