@@ -16,6 +16,8 @@
 # end
 # @param {TreeNode} root
 # @return {Boolean}
+test_root = [1,2,2,3,4,4,3]
+
 def is_symmetric(root)
     return true if root.nil?
 
@@ -31,5 +33,7 @@ def compare_func(p,q)
         false
     end
 end
+
+p is_symmetric(test_root)
 # @lc code=end
 
