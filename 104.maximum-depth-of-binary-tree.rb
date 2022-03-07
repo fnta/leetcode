@@ -17,6 +17,8 @@
 # @param {TreeNode} root
 # @return {Integer}
 # t - top, l - left, r - right
+test_root = [1,nil,2]
+
 def max_depth(root)
   if !root.nil?
     ld = max_depth(root.left)
@@ -26,5 +28,7 @@ def max_depth(root)
     0
   end
 end
+
+p max_depth(test_root)
 # @lc code=end
 
