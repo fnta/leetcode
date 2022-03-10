@@ -16,14 +16,15 @@
 # end
 # @param {Integer[]} nums
 # @return {TreeNode}
-test_nums = [-10,-3,0,5,9]
-p test_nums
+test = [-10,-3,0,5,9]
 
 def sorted_array_to_bst(nums)
-  mid = test_nums.length
-  p mid
+  nums.length
+
+  mid = nums.length/2
+  root = nums[mid]
 end
 
-p sorted_array_to_bst(test_nums)
+p sorted_array_to_bst(test)
 # @lc code=end
 
