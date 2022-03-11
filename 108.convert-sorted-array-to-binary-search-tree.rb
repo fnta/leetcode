@@ -16,15 +16,19 @@
 # end
 # @param {Integer[]} nums
 # @return {TreeNode}
-test = [-10,-3,0,5,9]
-
-def sorted_array_to_bst(nums)
-  nums.length
-
-  mid = nums.length/2
-  root = nums[mid]
+class TreeNode
+  attr_accessor :val, :left, :right
+  def initialize(val)
+    @val = val
+    @left, @right = nil, nil
+  end
 end
 
-p sorted_array_to_bst(test)
+t = TreeNode.new(3)
+p t
+
+#def sorted_array_to_bst(nums)
+#  nums.length
+#end
 # @lc code=end
 
