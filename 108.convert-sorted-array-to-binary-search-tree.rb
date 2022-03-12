@@ -16,6 +16,8 @@
 # end
 # @param {Integer[]} nums
 # @return {TreeNode}
+test = [-10,-3,0,5,9]
+
 class TreeNode
   attr_accessor :val, :left, :right
   def initialize(val)
@@ -24,9 +26,16 @@ class TreeNode
   end
 end
 
-t = TreeNode.new(3)
-p t
+def sorted_array_to_bst(nums, lo = 0, hi = nums.length-1)
+  return if lo > hi
+  mid = (lo + hi + 1) / 2
+  TreeNode.new(nums[mid]).tap do |root|
+    root.left = sorted_array_to_bst(nums, lo, mid-1)
+    root.right = sorted_array_to_bst(nums, mid+1, hi)
+  end
+end
 
+p sorted_array_to_bst(test)
 #def sorted_array_to_bst(nums)
 #  nums.length
 #end
