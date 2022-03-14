@@ -16,6 +16,22 @@
 # end
 # @param {TreeNode} root
 # @return {Boolean}
+class TreeNode
+  attr_accessor :val, :left, :right
+  def initialize(val)
+    @val = val
+    @left, @right = nil, nil
+  end
+end
+
+t = TreeNode.new(3)
+tl = TreeNode.new(9)
+tr = TreeNode.new(20)
+trl = TreeNode.new(15)
+trr = TreeNode.new(7)
+
+p tr
+
 def is_balanced(root)
     
 end
