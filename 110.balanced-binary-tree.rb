@@ -24,13 +24,15 @@ class TreeNode
   end
 end
 
-t = TreeNode.new(3)
-tl = TreeNode.new(9)
-tr = TreeNode.new(20)
-trl = TreeNode.new(15)
-trr = TreeNode.new(7)
-
-p tr
+tn1 = TreeNode.new(3)
+tn2 = TreeNode.new(9)
+tn3 = TreeNode.new(20)
+tn4 = TreeNode.new(15)
+tn5 = TreeNode.new(7)
+tn1.left = tn2
+tn1.right = tn3
+tn3.left = tn4
+tn3.right = tn5
 
 def is_balanced(root)
     
