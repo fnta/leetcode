@@ -35,7 +35,9 @@ tn3.left = tn4
 tn3.right = tn5
 
 def is_balanced(root)
-    
+  if root == nil
+    return 0
+  end
 end
 # @lc code=end
 
