@@ -38,6 +38,9 @@ def is_balanced(root)
   if root == nil
     return 0
   end
+
+  left = is_balanced(root.left)
+  right = is_balanced(root.right)
 end
 # @lc code=end
 
