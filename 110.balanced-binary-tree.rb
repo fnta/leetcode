@@ -44,7 +44,7 @@ def is_balanced(root)
   if(left - right).abs > 1 || left < 0 || right < 0
     return -1
   end
-  return [left, right].max
+  return [left, right].max + 1
 end
 
 p is_balanced(tn1)
