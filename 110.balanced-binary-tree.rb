@@ -47,6 +47,9 @@ def is_balanced(root)
   return [left, right].max + 1
 end
 
+def depth(root)
+end
+
 p is_balanced(tn1)
 # @lc code=end
 
