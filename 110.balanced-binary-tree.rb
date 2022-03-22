@@ -35,19 +35,20 @@ tn3.left = tn4
 tn3.right = tn5
 
 def is_balanced(root)
+  return depth(root) >= 0
+end
+
+def depth(root)
   if root == nil
     return 0
   end
 
-  left = is_balanced(root.left)
-  right = is_balanced(root.right)
+  left = depth(root.left)
+  right = depth(root.right)
   if(left - right).abs > 1 || left < 0 || right < 0
     return -1
   end
   return [left, right].max + 1
-end
-
-def depth(root)
 end
 
 p is_balanced(tn1)
