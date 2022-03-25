@@ -28,5 +28,7 @@ end
 def min_depth(root)
     
 end
+
+require 'minitest/autorun'
 # @lc code=end
 
