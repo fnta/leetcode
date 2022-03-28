@@ -28,6 +28,8 @@ end
 def min_depth(root)
   if root == nil
     return 0
+  elsif root.left == nil || root.right == nil
+    return [min_depth(root.left), min_depth(root.right)].max + 1
   else
     return [min_depth(root.left), min_depth(root.right)].min + 1
   end
