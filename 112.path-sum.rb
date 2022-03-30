@@ -20,5 +20,30 @@
 def has_path_sum(root, target_sum)
     
 end
+
+require 'minitest/autorun'
+
+class PathSumhTest < Minitest::Test
+  def test_has_path_sum
+    tn1 = TreeNode.new(5)
+    tn2 = TreeNode.new(4)
+    tn3 = TreeNode.new(11)
+    tn4 = TreeNode.new(7)
+    tn5 = TreeNode.new(2)
+    tn6 = TreeNode.new(8)
+    tn7 = TreeNode.new(13)
+    tn8 = TreeNode.new(4)
+    tn9 = TreeNode.new(1)
+    tn1.left = tn2
+    tn2.left = tn3
+    tn3.left = tn4
+    tn3.right = tn5
+    tn1.right = tn6
+    tn6.left = tn7
+    tn6.right = tn8
+    tn8.right = tn9
+    assert_equal true, has_path_sum(tn1, 22)
+  end
+end
 # @lc code=end
 
