@@ -18,13 +18,17 @@
 # @param {Integer} target_sum
 # @return {Boolean}
 def has_path_sum(root, target_sum)
-    
+  if root == nil
+    return false
+  else
+    has_path_sum
+  end
 end
 
 require 'minitest/autorun'
 
 class PathSumhTest < Minitest::Test
-  def test_has_path_sum
+  def test_has_path_sum1
     tn1 = TreeNode.new(5)
     tn2 = TreeNode.new(4)
     tn3 = TreeNode.new(11)
@@ -43,6 +47,22 @@ class PathSumhTest < Minitest::Test
     tn6.right = tn8
     tn8.right = tn9
     assert_equal true, has_path_sum(tn1, 22)
+  end
+
+  def test_has_path_sum2
+    tn1 = TreeNode.new(1)
+    tn2 = TreeNode.new(2)
+    tn3 = TreeNode.new(3)
+    tn1.left = tn2
+    tn2.right = tn3
+    assert_equal false, has_path_sum(tn1, 5)
+  end
+
+  def test_has_path_sum3
+    tn1 = TreeNode.new(1)
+    tn2 = TreeNode.new(2)
+    tn1.left = tn2
+    assert_equal false, has_path_sum(tn1, 0)
   end
 end
 # @lc code=end
