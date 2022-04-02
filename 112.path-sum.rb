@@ -20,8 +20,12 @@
 def has_path_sum(root, target_sum)
   if root == nil
     return false
+  elsif root.left == nil && root.right == nil
+    return true
   else
-    has_path_sum
+    target_sum = root.val
+    has_path_sum(root.left, target_sum)
+    has_path_sum(root.right, target_sum)
   end
 end
 
