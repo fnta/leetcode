@@ -8,7 +8,12 @@
 # @param {Integer} num_rows
 # @return {Integer[][]}
 def generate(num_rows)
-    
+  result = []
+  num_rows.times do |i|
+    result.push([1]*(i+1))
+  end
+
+  p result
 end
 
 require 'minitest/autorun'
