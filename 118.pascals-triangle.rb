@@ -8,12 +8,16 @@
 # @param {Integer} num_rows
 # @return {Integer[][]}
 def generate(num_rows)
-  result = []
-  num_rows.times do |i|
-    result.push([1]*(i+1))
+  return [] if num_rows.zero?
+  ans = [[1]]
+  (1..num_rows-1).each do |i|
+    prev = ans[-1]
+    cur = (1..i-1).map { |i| prev[i-1]+prev[i] }
+    cur.unshift 1
+    cur << 1
+    ans << cur
   end
-
-  p result
+  ans
 end
 
 require 'minitest/autorun'
