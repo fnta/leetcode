@@ -7,6 +7,7 @@
 # @lc code=start
 # @param {Integer} num_rows
 # @return {Integer[][]}
+# https://github.com/ACEMerlin/leetcode-ruby/blob/master/118.pascals-triangle.rb
 def generate(num_rows)
   return [] if num_rows.zero?
   ans = [[1]]
@@ -18,6 +19,26 @@ def generate(num_rows)
     ans << cur
   end
   ans
+end
+
+# https://www.youtube.com/watch?v=29vTra_8mSA
+def generate(num_rows)
+  result = []
+  num_rows.times do |i|
+    result.push([i]*(i+1))
+  end
+  num_rows.times do |i|
+    i.times do |j|
+      if j == 0
+        result[i][j] = 1
+      elsif i == j
+        result[i][j] = 1
+      else
+        result[i][j] = result[i-1][j-1] + result[i-1][j]
+      end
+    end
+  end
+  return result
 end
 
 require 'minitest/autorun'
