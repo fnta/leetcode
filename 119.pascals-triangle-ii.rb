@@ -23,5 +23,6 @@ class PascalsTriangle2Test < Minitest::Test
   def test_get_row
     assert_equal [[1,3,3,1]], get_row(3)
     assert_equal [[1]], get_row(0)
+    assert_equal [[1,1]], get_row(1)
   end
 end
