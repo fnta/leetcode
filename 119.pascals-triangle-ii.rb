@@ -9,9 +9,10 @@
 # @return {Integer[]}
 def get_row(row_index)
   result = []
-  row_index.times do |i|
+  (row_index+1).times do |i|
     result.push([1]*(i+1))
   end
+  p result
 end
 
 # @lc code=end
