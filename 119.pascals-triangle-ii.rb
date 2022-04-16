@@ -12,6 +12,17 @@ def get_row(row_index)
   (row_index+1).times do |i|
     result.push([1]*(i+1))
   end
+  (row_index+1).times do |i|
+    i.times do |j|
+      if j == 0
+        result[i][j] = 1
+      elsif i == j
+        result[i][j] = 1
+      else
+        result[i][j] = result[i-1][j-1] + result[i-1][j]
+      end
+    end
+  end
   p result
 end
 
