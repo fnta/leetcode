@@ -23,7 +23,7 @@ def get_row(row_index)
       end
     end
   end
-  p result
+  return result[row_index]
 end
 
 # @lc code=end
