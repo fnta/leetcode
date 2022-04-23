@@ -8,7 +8,11 @@
 # @param {String} s
 # @return {Boolean}
 def is_palindrome(s)
-    
+  return false if s.length.zero?
+  
+  (1...s.size).each do |i|
+    p s[i]
+  end
 end
 
 require 'minitest/autorun'
