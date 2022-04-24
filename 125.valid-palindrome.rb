@@ -12,6 +12,7 @@ def is_palindrome(s)
   
   (1...s.size).each do |i|
     p s[i]
+    p s[i].reverse
   end
 end
 
