@@ -12,8 +12,6 @@ def is_palindrome(s)
   
   (1...s.size).each do |i|
     p s[i].delete(",")
-    p s[i].delete(":")
-#    p s[i].reverse.strip
   end
 end
 
