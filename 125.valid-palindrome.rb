@@ -8,11 +8,9 @@
 # @param {String} s
 # @return {Boolean}
 def is_palindrome(s)
-  return false if s.length.zero?
-  
-  (1...s.size).each do |i|
-    p s[i].delete(",")
-  end
+  str = s.gsub(/[^a-zA-Z0-9]/,"")
+
+  p str
 end
 
 require 'minitest/autorun'
