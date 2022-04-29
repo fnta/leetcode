@@ -10,7 +10,7 @@
 def is_palindrome(s)
   str = s.gsub(/[^a-zA-Z0-9]/,"")
 
-  p str
+  p str.downcase
 end
 
 require 'minitest/autorun'
