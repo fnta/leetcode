@@ -8,9 +8,12 @@
 # @param {String} s
 # @return {Boolean}
 def is_palindrome(s)
-  str = s.gsub(/[^a-zA-Z0-9]/,"")
-
-  p str.downcase
+  str = str.gsub(/[^a-zA-Z0-9]/,"")
+  if str.downcase != str.downcase.reverse
+     return false
+  else
+     return true
+  end
 end
 
 require 'minitest/autorun'
