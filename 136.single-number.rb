@@ -12,3 +12,4 @@ def single_number(nums)
 end
 # @lc code=end
 
+require 'minitest/autorun'
