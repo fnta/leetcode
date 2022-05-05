@@ -8,7 +8,15 @@
 # @param {Integer[]} nums
 # @return {Integer}
 def single_number(nums)
-  p nums.sort    
+  p nums.sort
+
+  ans = sum = 0
+  (1...prices.size).each do |i|
+    sum += prices[i]-prices[i-1]
+    ans = [ans, sum].max
+    sum = [sum, 0].max
+  end
+  ans
 end
 # @lc code=end
 
