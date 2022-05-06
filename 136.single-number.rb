@@ -10,6 +10,12 @@
 def single_number(nums)
   p nums.sort
 
+  ans = 0
+  (1...nums.size).each do |i|
+    
+  end
+  ans
+
   ans = sum = 0
   (1...prices.size).each do |i|
     sum += prices[i]-prices[i-1]
