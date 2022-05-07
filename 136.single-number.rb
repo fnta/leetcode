@@ -9,18 +9,12 @@
 # @return {Integer}
 def single_number(nums)
   p nums.sort
+  nums = nums.sort
 
   ans = 0
   (1...nums.size).each do |i|
-    
-  end
-  ans
-
-  ans = sum = 0
-  (1...prices.size).each do |i|
-    sum += prices[i]-prices[i-1]
-    ans = [ans, sum].max
-    sum = [sum, 0].max
+    p nums[i-1]
+    p nums[i]
   end
   ans
 end
