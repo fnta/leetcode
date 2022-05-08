@@ -13,8 +13,11 @@ def single_number(nums)
 
   ans = 0
   (1...nums.size).each do |i|
-    p nums[i-1]
-    p nums[i]
+    if nums[i-1] == nums[i]
+      p nums[i-1]
+    else
+      p nums[i-1]
+    end
   end
   ans
 end
