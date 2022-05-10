@@ -8,18 +8,15 @@
 # @param {Integer[]} nums
 # @return {Integer}
 def single_number(nums)
-  p nums.sort
-  nums = nums.sort
-
-  ans = 0
-  (1...nums.size).each do |i|
-    if nums[i-1] == nums[i]
-      # p nums[i-1]
+  s = Set.new
+  nums.each do |n|
+    if s.include?(n)
+      s.delete(n)
     else
-      p nums[i-1]
+      s << n
     end
   end
-  ans
+  s.first
 end
 # @lc code=end
 
@@ -27,8 +24,8 @@ require 'minitest/autorun'
 
 class SingleNumberTest < Minitest::Test
   def test_single_number
-    test1 = [2,2,1]
-    test2 = [4,1,2,1,2]
+    test1 = [4,1,2,1,2]
+    test2 = [2,2,1]
     test3 = [1]
 
     assert_equal 1, single_number(test1)
