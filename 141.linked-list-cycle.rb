@@ -19,5 +19,8 @@
 def hasCycle(head)
     
 end
+
+require 'minitest/autorun'
+
 # @lc code=end
 
