@@ -22,5 +22,9 @@ end
 
 require 'minitest/autorun'
 
+class HasCycleTest < Minitest::Test
+  def test_hasCycle
+  end
+end
 # @lc code=end
 
