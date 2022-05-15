@@ -27,6 +27,15 @@ class HasCycleTest < Minitest::Test
   end
 end
 
+class ListNode
+  attr_accessor :val, :next
+
+  def initialize(val)
+    @val = val
+    @next = nil
+  end
+end
+
 class PathSumhTest < Minitest::Test
   def test_has_path_sum1
     tn1 = TreeNode.new(5)
