@@ -24,6 +24,7 @@ require 'minitest/autorun'
 
 class HasCycleTest < Minitest::Test
   def test_hasCycle
+    list = ListNode.new(3)
   end
 
   def test_run
