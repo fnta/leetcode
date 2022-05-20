@@ -27,6 +27,7 @@ class HasCycleTest < Minitest::Test
     list = ListNode.new(3)
     list.next = ListNode.new(2)
     list.next.next = ListNode.new(0)
+    list.next.next.next = ListNode.new(-4)
   end
 
   def test_run
