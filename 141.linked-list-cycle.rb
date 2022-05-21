@@ -28,6 +28,8 @@ class HasCycleTest < Minitest::Test
     list.next = ListNode.new(2)
     list.next.next = ListNode.new(0)
     list.next.next.next = ListNode.new(-4)
+
+    assert_equal true, hasCycle(list)
   end
 
   def test_run
