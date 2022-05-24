@@ -81,22 +81,6 @@ class PathSumhTest < Minitest::Test
     tn8.right = tn9
     assert_equal true, has_path_sum(tn1, 22)
   end
-
-  def test_has_path_sum2
-    tn1 = TreeNode.new(1)
-    tn2 = TreeNode.new(2)
-    tn3 = TreeNode.new(3)
-    tn1.left = tn2
-    tn2.right = tn3
-    assert_equal false, has_path_sum(tn1, 5)
-  end
-
-  def test_has_path_sum3
-    tn1 = TreeNode.new(1)
-    tn2 = TreeNode.new(2)
-    tn1.left = tn2
-    assert_equal false, has_path_sum(tn1, 0)
-  end
 end
 # @lc code=end
 
