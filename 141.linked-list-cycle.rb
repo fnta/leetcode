@@ -38,6 +38,12 @@ class HasCycleTest < Minitest::Test
 
     assert_equal true, hasCycle(list)
   end
+
+  def test_hasCycle3
+    list = ListNode.new(1)
+
+    assert_equal false, hasCycle(list)
+  end
 end
 
 class ListNode
