@@ -17,7 +17,13 @@
 # @param {ListNode} head
 # @return {Boolean}
 def hasCycle(head)
-    
+  return false if head.nil? || head.next.nil?
+  slow, fast = head, head.next
+  while !fast.nil? && !fast.next.nil?
+    return true if fast == slow
+    slow, fast = slow.next, fast.next.next
+  end
+  false
 end
 
 require 'minitest/autorun'
