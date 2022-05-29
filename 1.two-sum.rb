@@ -12,5 +12,6 @@
 def two_sum(nums, target)
 end
 
+require 'minitest/autorun'
 # @lc code=end
 
