@@ -14,7 +14,7 @@ end
 
 require 'minitest/autorun'
 
-class SingleNumberTest < Minitest::Test
+class TwoSumTest < Minitest::Test
     def test_single_number
       test1 = [4,1,2,1,2]
       test2 = [2,2,1]
