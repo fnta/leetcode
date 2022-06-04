@@ -20,10 +20,12 @@ class TwoSumTest < Minitest::Test
       test_target1 = 9
       test_nums2 = [3,2,4]
       test_target2 = 6
+      test_nums3 = [3,3]
+      test_target3 = 6
   
       assert_equal [0,1], two_sum(test_nums1, test_target1)
       assert_equal [1,2], two_sum(test_nums2, test_target2)
-      assert_equal 1, single_number(test3)
+      assert_equal [0,1], two_sum(test_nums3, test_target3)
     end
   end
 # @lc code=end
