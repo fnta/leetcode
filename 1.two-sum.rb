@@ -15,7 +15,7 @@ end
 require 'minitest/autorun'
 
 class TwoSumTest < Minitest::Test
-    def test_two_sum
+    def test_two_sum1
       test_nums1 = [2,7,11,15]
       test_target1 = 9
       test_nums2 = [3,2,4]
@@ -30,3 +30,27 @@ class TwoSumTest < Minitest::Test
   end
 # @lc code=end
 
+class HasCycleTest < Minitest::Test
+    def test_hasCycle1
+      list = ListNode.new(3)
+      list.next = ListNode.new(2)
+      list.next.next = ListNode.new(0)
+      list.next.next.next = ListNode.new(-4)
+  
+      assert_equal true, hasCycle(list)
+    end
+  
+    def test_hasCycle2
+      list = ListNode.new(1)
+      list.next = ListNode.new(2)
+  
+      assert_equal true, hasCycle(list)
+    end
+  
+    def test_hasCycle3
+      list = ListNode.new(1)
+  
+      assert_equal false, hasCycle(list)
+    end
+  end
+  
